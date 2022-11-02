@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initialiscale=1.0">
+        <script src="hg.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+        <script>
+            function captureFormData(f)
+            {
+              var data = "", i, len;
+              len = f.length;
+              for (i = 0; i < len; i++)
+              {
+                data = data + f.elements[i].value;         
+                if (i < len-1) 
+                {
+                  data = data + ", "; 
+                }  
+              }
+              alert (data); 
+            }
+            </script>
+        <link rel="icon" href="images/logos/icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="hg.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+
+    <body>
+        <header>
+            <a class="hmbgr" onclick="toggleNavBar()"><i class="fa fa-bars"></i></a>  
+        </header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html" title="Go To Home Page">Home</a></li>
+                <li><a href="products.html" title="Go To Products Page">Products</a></li>
+                <li><a href="gallery.html" title="Go To Gallery Page">Gallery</a></li>
+                <li><a href="socials.html" title="Go To Socials Page">Socials</a></li>
+                <li><a href="macrame.html" title="Go To Macrame Page">Macrame</a></li>
+                <li><a href="contact.html" title="Go To Contact Me Page">Contact Me</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2 class="center">Contact Me With Any Questions or Custom Order Requests</h2>
+            <main>
+                <div style="text-align: center";>Required information is marked with an asterisk (*)<br><br>
+                <form id="frm">
+                    <div class="frm-style">
+                        <div class="rightJustify">
+                        <label for="fname">First Name:</label>
+                        </div>
+                        <div class="leftJustify">
+                        <input type="text" id="fname" name="fname"><br>
+                        </div>
+                        <div class="rightJustify">
+                        <label for="lname">Last Name:</label>
+                        </div>
+                        <div class="leftJustify">
+                        <input type="text" id="lname" name="lname"><br>
+                        </div>
+                        <div class="rightJustify">
+                        <label for="email">* E-Mail:</label>
+                        </div>
+                        <div class="leftJustify">
+                        <input type="text" id="email" name="email" required><br>
+                        </div>
+                        <div class="rightJustify">
+                        <label for="item">* Desired Item:</label>
+                        </div>
+                        <div class="leftJustify">
+                        <select id="item" name="item">
+                            <option value="bookmark">Macrame Bookmark</option>
+                            <option value="rainbow">Custom Color Rainbow</option>
+                            <option value="charm">Macrame Charm</option>
+                            <option value="coaster">Macrame Coaster</option>
+                            <option value="other">Other</option>
+                        </select><br>
+                        </div>
+                        <div class="rightJustify">
+                        <label for="ammount">Number Desired:</label>
+                        </div>
+                        <div class="leftJustify">
+                        <input type="number" id="ammount" name="ammount" min="1" max="20"><br>
+                        </div>
+                        <div class="rightJustify">
+                            <label for="find">* How Did You Find Me?:</label>
+                            </div>
+                            <div class="leftJustify">
+                            <select id="find" name="find">
+                                <option value="insta">Instagram</option>
+                                <option value="etsy">Etsy</option>
+                                <option value="tiktok">TikTok</option>
+                                <option value="friend">Friend</option>
+                                <option value="first">Just Now!</option>
+                                <option value="other">Other</option>
+                            </select><br>
+                            </div>
+                        <div class="rightJustify">
+                        <label for="comment">Additional Comments/Questions:</label>
+                        </div>
+                        <div class="leftJustify">
+                        <textarea id="comments" name="comments" rows="3" cols="50"></textarea><br>
+                        </div>
+                        <div class="rightJustify">
+                        <label for="mySubmit"></label>
+                        </div>
+                        <div class="leftJustify">
+                        <input type="submit" id="mySubmit" value="Submit">
+                        </div>
+                    </div>
+                </form></div>
+                <script>
+                    $("#frm").validate();
+                  
+                    $(function ()
+                    {
+                      $('#frm').submit(function ()
+                      {
+                        if($(this).valid())
+                        {
+                          captureFormData(this);
+                        }
+                      });
+                    });
+                  </script>
+        </main>
+        <footer>
+            <p id="shopfoot"><a href="https://www.etsy.com/shop/HandmadeGuided">Handmade Guided</a><br>
+            Melissa Walker<br>
+            An Etsy&trade; Shop</p>
+        <p id="infofoot">&copy; 2022 Handmade Guided<br>
+        <a href="mailto:mwalker183@gmail.com" title="Send an email to sho owner Melissa Walker">mwalker183@gmail.com</a><br>
+    813-731-6631</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,328 @@
+:root {
+    --main-bg-color: hsl(52,62%,91%);
+    --header-color: hsl(35, 65%, 60%);
+    --pink: hsl(300,100%,85%);
+    --faded-header-color: hsl(35, 66%, 75%);
+    box-sizing: border-box;
+
+}
+
+header {
+    background: url("images/logos/hglogo.jpg") no-repeat center;
+    background-size: 250px;
+    padding-right: 10px;
+    display: block;
+    padding: 80px;
+    margin: -8px;
+}
+
+nav {
+    text-align: center;
+    padding-bottom: 0;
+    font-size: 50px;
+    font-style: italic;
+    position: -webkit-sticky;
+    position: sticky;
+    display: block;
+    border-style: solid;
+    border-left: 0;
+    border-right: 0;
+    top: 0;
+    background-color: var(--main-bg-color);
+}
+
+main {
+    line-height: 30px;
+    font-family: Georgia, serif;
+    font-size: large;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+}
+
+nav a {
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    color: var(--header-color);
+    font-style: normal;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
+.homehero {
+    background-image: url(images/hero/homehero.jpg);
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.productshero {
+    background-image: url(images/hero/rainbowhero.webp);
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center bottom 45%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.macramehero {
+    background-image: url(images/hero/macramehero.webp);
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center bottom 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.large {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#shopfoot {
+    float: left;
+    font-style: italic;
+    text-align: left;
+}
+
+#shopfoot a {
+    color: black;
+}
+
+#shopfoot a:hover {
+    color: var(--header-color);
+}
+
+#infofoot {
+    float: right;
+    font-style: italic;
+    text-align: right;
+}
+
+#infofoot a {
+    color: black;
+}
+
+#infofoot a:hover {
+    color: var(--header-color);
+}
+
+h1 {
+    color: var(--header-color);
+    line-height: 80px;
+    border-bottom: groove;
+    border-color: var(--pink);
+}
+
+h2 {
+    color: var(--header-color);
+    font-style: italic;
+}
+
+footer {
+    border-style: solid;
+    border-width: .2px;
+}
+
+.exciting {
+    font-style: italic;
+    font-size: 1.5em;
+    color: var(--header-color);
+}
+
+tr:nth-child(even) {
+    background-color: var(--faded-header-color);
+}
+
+td {
+    border: solid;
+}
+
+th {
+    background-color: var(--header-color);
+    text-align: center;
+}
+
+table {
+    width: 350px;
+    border-collapse: collapse;
+    border-style: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rightjustify {
+    text-align: right;
+}
+
+.leftjustify {
+    text-align: left;
+}
+
+dt {
+    color: var(--header-color);
+    border-bottom: solid;
+    border-color: var(--pink);
+    font-size: large;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    width: 400px;
+    float: left;
+}
+  
+.gallery:hover {
+    border: 1px solid #777;
+}
+  
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+  
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+dd img {
+    width: 300px;
+    height: auto;
+    padding: 20px;
+}
+
+.hmbgr {
+    background-color: var(--main-bg-color);
+    color: var(--header-color);
+    padding: .95em;
+    position: absolute;
+    left: 9%;
+    top: 8%;
+    display: none;
+}
+
+.hmbgr a:hover {
+    background-color: var(--header-color);
+    color: white;
+}
+
+.frm-style {
+    display: inline-grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: auto auto;
+    background-color: var(--faded-header-color);
+    padding: 10px;
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+}
+
+label.error {
+    text-align: left;
+    margin-top: 5px;
+    color: red;
+    font-style: italic;
+    font-size: .9em;
+    font-family: Arial;
+}
+
+
+
+@media only screen and (max-width: 760px) {
+    .productshero, .homehero, .macramehero {
+        display: none;
+    }
+
+    h1 {
+        font-size: 20px;
+        line-height: 50px;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 15px;
+        line-height: 50px;
+    }
+
+    nav {
+        padding: 0;
+    }
+
+    nav a:hover {
+        color: white;
+    }
+
+    nav li {
+        display: block;
+        text-align: center;
+        font-size: 15px;
+        background-color: var(--faded-header-color);
+        padding: 5px;
+    }
+
+    video {
+        height: 400px;
+        width: 400px;
+    }
+
+    .hmbgr {
+        display: block;
+    }
+
+    .hmbgr a:hover {
+        background-color: var(--header-color);
+        color: white;
+    }
+
+    #navbar {
+        display: none;
+    }
+
+    header {
+        background-size: 200px;
+    }
+
+    .mobile img {
+        height: 90%;
+        width: 90%;
+        margin: 0%;
+    }
+
+    dd img {
+        width: 50%;
+        height: 50%;
+        padding: 20px;
+    }
+
+    .responsive {
+     width: 49.99999%;
+     margin: 6px 0;;
+    }
+
+}
